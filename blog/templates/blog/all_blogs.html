@@ -3,14 +3,14 @@
 
 
 <div class="container text-center">
-    <h1>My First Practice Website</h1>
-    <h2>Gennaro Has Written <span style="color:red">{{ blogs_all|length }}</span> blogs</h2>
+    <h1>My Personal Blog</h1>
+    <h2>Gennaro Has Written <span style="color:red">{{ blogs_all|length }}</span> blog{{ blogs|length|pluralize }}</h2>
 </div>
 
 {% for blog in blogs %}
 
-<h2 class="container text-left alert alert-success">{{ blog.title }}</h2>
-<h5 class="container text-left">{{ blog.date }}</h5>
-<p class="container text-left">{{ blog.blog_text }}</p>
+<a href="{% url 'blog:detail' blog.id %}"><h2 class="container text-left alert alert-success">{{ blog.title }}</h2></a>
+<h5 class="container text-left">{{ blog.date|date:'M. d, Y' }}</h5>
+<p class="container text-left">{{ blog.blog_text|striptags|truncatechars:100 }}</p>
 
 {% endfor %}
