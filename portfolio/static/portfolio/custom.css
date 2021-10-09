@@ -1,0 +1,21 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.nav-link:hover {
+    color: rgb(40, 117, 40) !important;
+}
+
+.nav-item {
+    font-weight: 900;
+}
+
+#bg-color-change {
+    background: rgb(143, 142, 147);
+    background: linear-gradient(137deg, rgba(143, 142, 147, 1) 0%, rgba(185, 185, 204, 1) 35%, rgba(215, 238, 242, 1) 100%);
+}
+
+.navbar-nav>li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
